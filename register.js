@@ -35,7 +35,7 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
     }
   
     try {
-      const response = await fetch('http://127.0.0.1:8000/register', {
+      const response = await fetch('https://loginfastapi20.onrender.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
         message.style.color = 'green';
         message.textContent = 'Usuario registrado exitosamente.';
         setTimeout(() => {
-          window.location.href = '/static/index.html';
+          window.location.href = 'index.html';
         }, 2000);
       } else {
         message.textContent = data.detail || 'Error al registrar usuario.';
