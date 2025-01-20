@@ -28,8 +28,10 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
     }
   } catch (error) {
     console.error('Error:', error);
-    document.getElementById('response-message').textContent = 'Error de conexión.';
+    document.getElementById('response-message').style.color = 'red';
+    document.getElementById('response-message').textContent = 'Error de conexión o respuesta inválida.';
   }
+  
 });
 
 // Redirección al registro
